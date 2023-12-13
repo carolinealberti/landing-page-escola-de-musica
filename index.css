@@ -1,29 +1,28 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    font-family: 'Roboto' , sans-serif;
     padding: 0;
 }
 
 :root {
-    --color-primary: #ed4d1b;
-    --color-secundary: #ff9a3c;
+    --color-primary: #ED4D1B;
+    --color-secondary: #FF9A3C;
     --color-black: #000;
     --color-white: #fff;
 }
 
 body {
-    background: linear-gradient(90deg, #ffe7d1 0%, #fff2e6 100%);
+    background: #fff;
     padding: 0 1rem;
 }
 
-header, 
+header,
 .hero-section,
-.courses-section,
-footer {
+.courses-section {
     border-color: var(--color-black);
     border-style: solid;
-    border-width: 0 1px 1px 1px;
+    border-width: 0 0.2px 0.2px 0.2px;
     padding: 1.25rem;
 }
 
@@ -41,7 +40,7 @@ header nav {
 nav a {
     color: var(--color-black);
     font-size: 1.25rem;
-    padding: 0.5rem;
+    padding: .5rem;
     text-decoration: none;
 }
 
@@ -52,11 +51,11 @@ header nav a:nth-child(2n-1) {
 .button {
     background-color: var(--color-primary);
     border: 2px solid var(--color-black);
-    box-shadow: 4px 4px 0 var(--color-black);
+    box-shadow: 2px 2px 0 var(--color-black);
     color: var(--color-black);
     display: block;
     font-size: 1.25rem;
-    padding: 0.75rem 1rem;
+    padding: .75rem 1rem;
     max-width: 14rem;
     text-align: center;
     text-decoration: none;
@@ -81,6 +80,7 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
+
 }
 
 .hero-section p {
@@ -89,11 +89,12 @@ h2 {
 }
 
 .hero-section .button {
-    position: relative;
+   position: relative; 
 }
 
 .hero-section .button::after {
     content: '';
+    background: url("img/arrow-curve.svg");
     position: absolute;
     top: 5rem;
     right: -4rem;
@@ -108,6 +109,7 @@ h2 {
 
 .decoration::after {
     content: '';
+    background: url("img/three-dashes.svg");
     position: absolute;
     top: -0.75rem;
     height: 36px;
@@ -129,15 +131,16 @@ h2 {
 
 .card {
     background-color: var(--color-primary);
-    border: 2px solid var(--color-black);
-    box-shadow: 4px 4px 0 var(--color-black);
+    border: 1px solid var(--color-black);
+    box-shadow: 1.5px 1.5px 0 var(--color-black);
     max-width: 17rem;
     padding: 2rem 0 0 2rem;
 }
 
 .card:nth-child(2n) {
     align-self: end;
-    background-color: var(--color-secundary);
+    background-color: var(--color-secondary);
+
 }
 
 .card strong {
@@ -152,6 +155,8 @@ h2 {
     width: fit-content;
 }
 
+/* rodape*/
+
 footer {
     border-bottom: 0;
     padding: 1rem 1.25rem 4rem;
@@ -159,7 +164,7 @@ footer {
 
 footer nav a {
     display: block;
-    padding-left: 0;
+    padding-left: 0 ;
 }
 
 .newsletter-form label {
@@ -168,12 +173,14 @@ footer nav a {
 }
 
 .newsletter-form input {
-    border: 2px solid var(--color-black);
+    border: 1.5px solid var(--color-black);
     box-shadow: 4px 4px 0 var(--color-black);
     font-size: 1.5rem;
-    padding: 0.5rem;
+    padding: .5rem;
     width: 100%;
 }
+
+/* utilitarios */
 
 .mt-1 {
     margin-top: 1rem;
@@ -204,7 +211,8 @@ footer nav a {
     text-align: center;
 }
 
-/* Responsividade */
+/* responsividade */
+
 @media screen and (min-width: 40rem) {
     header nav {
         display: block;
@@ -240,11 +248,12 @@ footer nav a {
     h1, h2 {
         font-size: 4rem;
     }
+
     .container {
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
-        max-width: 72rem;
+      display: flex;  
+      align-items: center;
+      margin: 0 auto;
+      max-width: 72rem;
     }
 
     .container.row-reverse {
@@ -269,8 +278,8 @@ footer nav a {
     }
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 80rem) {
     .container {
-        max-width: 90rem;
+        max-width: 80rem;
     }
 }
